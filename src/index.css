@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-sans: "Montserrat", sans-serif;
+  
+  --color-gold-50: #faf7f2;
+  --color-gold-100: #f2eade;
+  --color-gold-200: #e5d5be;
+  --color-gold-300: #d4b895;
+  --color-gold-400: #c1996d;
+  --color-gold-500: #b07e4d;
+  --color-gold-600: #a16b3e;
+  --color-gold-700: #865331;
+  --color-gold-800: #6d432b;
+  --color-gold-900: #583725;
+  --color-gold-950: #301d13;
+
+  --color-accent-gold: #c5a880;
+  --color-luxury-dark: #0f0f11;
+  --color-luxury-gray: #1c1c1f;
+  --color-luxury-light: #faf9f6;
+  --color-luxury-cream: #f4f1ea;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: var(--color-luxury-dark);
+    color: #e5e7eb;
+    /* Custom smoothing for fonts */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    letter-spacing: 0.03em;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0f11;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c5a880;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a16b3e;
+}
+
+/* Swiper custom styles for dark theme */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #c5a880 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #c5a880 !important;
+}
+
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Selection */
+::selection {
+  background-color: #c5a880;
+  color: #0f0f11;
+}
+
+/* Luxury Gold Text Gradient */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #f5edd8 0%, #c5a880 50%, #935d25 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* Smooth reveal effect transitions */
+.reveal-wrapper {
+  overflow: hidden;
+  position: relative;
+}
